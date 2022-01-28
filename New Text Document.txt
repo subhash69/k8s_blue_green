@@ -1,3 +1,4 @@
 https://minikube.sigs.k8s.io/docs/start/
 https://kubernetes.io/docs/tasks/tools/
 GIT > https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04
+Mini Kube > https://vegastack.com/tutorials/how-to-install-kubernetes-with-minikube-on-ubuntu-18-04/

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel-green
+  namespace: hotel
+spec:
+  replicas: 0 
+  selector:
+    matchLabels:
+      app: hotel
+      version: green
+  template:
+    metadata:
+      labels:
+        app: hotel
+        version: green
+    spec:
+      containers:
+      - name: hotel
+        image: vipindevops/blue-green:1.0
+        ports:
+        - containerPort: 80

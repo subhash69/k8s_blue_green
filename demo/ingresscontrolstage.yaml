@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1 
+kind: Ingress
+metadata:
+  name: hotel-ingress-stage
+  namespace: hotel
+spec:
+  rules:
+  - host: hotelstage.example.com 
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:  
+          service:
+            name: hotel-svc-stage
+            port:
+              number: 80

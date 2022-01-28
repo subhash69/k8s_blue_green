@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hotel-ingress-stable
+  namespace: hotel
+spec:
+  rules:
+  - host: hotel.example.com 
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hotel-svc-stable
+            port: 
+             number: 80
